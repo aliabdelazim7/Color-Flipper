@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Color Changer</h1>
+    <button id="changeColorBtn">Change Background Color</button>
+
+    <script>
+        const button = document.getElementById('changeColorBtn');
+
+        button.addEventListener('click', () => {
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+
+
+
+<!--     js ملاحظات 
+    
+    1. Math.random() دالة تولد رقم عشواىي بين 0 و 1
+    2. Math.floor() دالة تقرب الرقم الى اقل عدد صحيح
+    3. toString(16) تحول الرقم الى نظام العد الستعشري (hexadecimal)
+    4. 16777215 هو اكبر رقم في نظام العد الستعشري (ffffff)
+    5. '#' + ... لاضافة علامة الهاش في بداية اللون
+    6. document.body.style.backgroundColor لتغيير لون خلفية الصفحة
+    7. addEventListener('click', ...) لتحديد حدث النقر على الزر
+    8. const لتحديد متغير ثابت لا يمكن تغييره
+    9. arrow function () => {} لكتابة دوال مختصرة
+    10. getElementById('changeColorBtn') للحصول على الزر بواسطة معرفه
+    
+    
+
+
+
+
+-->
+    
+</body>
+</html>
